@@ -7,12 +7,6 @@ from pandas import DataFrame
 
 from config import MODEL_DIR, MODEL_EVAL_DIR, MODEL_LOG_DIR
 
-# from typing import Literal
-
-
-# 学習ステップ
-# TrainType = Literal["trusted", "full"]
-
 
 class TrainPhase(StrEnum):
     PRETUNE = "pretune"
