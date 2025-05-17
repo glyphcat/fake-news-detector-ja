@@ -1,0 +1,18 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "cSpell.words": [
+        "isin",
+        "pretune"
+    ],
+    "editor.formatOnSave": true,
+    "python.analysis.completeFunctionParens": true,
+    // TODO: 型チェック対応
+    "python.analysis.typeCheckingMode": "off",
+    "python.envFile": "${workspaceFolder}/.env",
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ]
+}
