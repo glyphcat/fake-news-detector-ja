@@ -36,7 +36,7 @@ class EnvType(StrEnum):
 
 class Utils:
     @staticmethod
-    def export_df_as_csv(df: DataFrame, dir_path: str, file_name: str, str):
+    def export_df_as_csv(df: DataFrame, dir_path: str, file_name: str):
         file_path = os.path.join(dir_path, file_name)
         Path(dir_path).mkdir(parents=True, exist_ok=True)
         df.to_csv(file_path, index=False)
