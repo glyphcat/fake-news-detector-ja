@@ -21,7 +21,7 @@ class TrainPhase(StrEnum):
         return [item.value for item in cls]
 
 
-class EnvPhase(StrEnum):
+class EnvType(StrEnum):
     LOCAL = "local"
     CLOUD = "cloud"
 
@@ -36,7 +36,7 @@ class EnvPhase(StrEnum):
 
 class Utils:
     @staticmethod
-    def export_df_as_csv(df: DataFrame, dir_path: str, file_name: str):
+    def export_df_as_csv(df: DataFrame, dir_path: str, file_name: str, str):
         file_path = os.path.join(dir_path, file_name)
         Path(dir_path).mkdir(parents=True, exist_ok=True)
         df.to_csv(file_path, index=False)
@@ -57,12 +57,12 @@ class Utils:
         return output_dir
 
     @staticmethod
-    def parse_env_phase_args():
+    def parse_env_type_args():
         parser = argparse.ArgumentParser()
         parser.add_argument(
             "--env",
             type=str,
-            choices=EnvPhase.get_values(),
+            choices=EnvType.get_values(),
             required=True,
             help="Use 'cloud' for training at Google Colab, 'local' for test training at local",
         )
