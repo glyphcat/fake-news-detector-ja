@@ -44,7 +44,9 @@ def tokenize(batch):
 
 
 def get_tokenized_dataset(train_phase: TrainPhase):
-    test_df = pd.read_csv(f"{SPLIT_DIR}/{train_phase}/test.csv")
+    # NOTE: 精度の改善を評価するため、モデルの評価はtrain_phaseに関係なく、全データを使用するように変更
+    test_df = pd.read_csv(f"{SPLIT_DIR}/{TrainPhase.FINETUNE}/test.csv")
+    # test_df = pd.read_csv(f"{SPLIT_DIR}/{train_phase}/test.csv")
     test_ds = Dataset.from_pandas(test_df)
     tokenized_test = test_ds.map(tokenize, batched=True)
     return tokenized_test
