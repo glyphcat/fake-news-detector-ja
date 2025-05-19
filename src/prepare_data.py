@@ -7,6 +7,7 @@ from config import (
     PROCESSED_DIR,
     REAL_DATA_NAME,
     REAL_NEWS_DATASET,
+    SAMPLE_NUM_FOR_TEST,
 )
 from utils import Utils
 
@@ -73,9 +74,9 @@ if __name__ == "__main__":
 
     # テスト時はデータ数制限
     if args.is_test_run:
-        full_fake_df = full_fake_df.head(50)
-        partial_fake_df = partial_fake_df.head(50)
-        real_df = real_df.head(50)
+        full_fake_df = full_fake_df.head(SAMPLE_NUM_FOR_TEST)
+        partial_fake_df = partial_fake_df.head(SAMPLE_NUM_FOR_TEST)
+        real_df = real_df.head(SAMPLE_NUM_FOR_TEST)
 
     # 処理ずみデータの書き込み
     Utils.export_df_as_csv(full_fake_df, PROCESSED_DIR, FULL_FAKE_DATA_NAME)
