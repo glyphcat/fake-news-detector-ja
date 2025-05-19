@@ -30,7 +30,7 @@ MODEL_EVAL_DIR = "evaluate"
 # データファイル
 FULL_FAKE_DATA_NAME = "full_fake.csv"
 PARTIAL_FAKE_DATA_NAME = "partial_fake.csv"
-REAL_FAKE_DATA_NAME = "real_fake.csv"
+REAL_DATA_NAME = "real.csv"
 
 TRAIN_DATA_NAME = "train.csv"
 VALIDATION_DATA_NAME = "validation.csv"

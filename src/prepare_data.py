@@ -5,7 +5,7 @@ from config import (
     FULL_FAKE_DATA_NAME,
     PARTIAL_FAKE_DATA_NAME,
     PROCESSED_DIR,
-    REAL_FAKE_DATA_NAME,
+    REAL_DATA_NAME,
     REAL_NEWS_DATASET,
 )
 from utils import Utils
@@ -80,4 +80,4 @@ if __name__ == "__main__":
     # 処理ずみデータの書き込み
     Utils.export_df_as_csv(full_fake_df, PROCESSED_DIR, FULL_FAKE_DATA_NAME)
     Utils.export_df_as_csv(partial_fake_df, PROCESSED_DIR, PARTIAL_FAKE_DATA_NAME)
-    Utils.export_df_as_csv(real_df, PROCESSED_DIR, REAL_FAKE_DATA_NAME)
+    Utils.export_df_as_csv(real_df, PROCESSED_DIR, REAL_DATA_NAME)

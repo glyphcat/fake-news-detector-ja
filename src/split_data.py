@@ -8,7 +8,7 @@ from config import (
     PARTIAL_FAKE_DATA_NAME,
     PROCESSED_DIR,
     RANDOM_STATE,
-    REAL_FAKE_DATA_NAME,
+    REAL_DATA_NAME,
     SPLIT_FINETUNE_DIR,
     SPLIT_PRETUNE_DIR,
     TEST_DATA_NAME,
@@ -44,7 +44,7 @@ def split_data(combined_df: pd.DataFrame, dir_path: str):
 if __name__ == "__main__":
     full_fake_df = pd.read_csv(os.path.join(PROCESSED_DIR, FULL_FAKE_DATA_NAME))
     partial_fake_df = pd.read_csv(os.path.join(PROCESSED_DIR, PARTIAL_FAKE_DATA_NAME))
-    real_df = pd.read_csv(os.path.join(PROCESSED_DIR, REAL_FAKE_DATA_NAME))
+    real_df = pd.read_csv(os.path.join(PROCESSED_DIR, REAL_DATA_NAME))
 
     # ラベルのデータ数を同数にする
     min_size = min(len(full_fake_df), len(real_df))
