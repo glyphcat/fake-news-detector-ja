@@ -231,5 +231,12 @@ model/{phase}/evaluate/results.json
 
 ## TODO
 
+- Google Colabノートブック整備
+- 各種パラメータの環境変数化
+- ローカル/クラウド実行に合わせて出力先を変更する機能実装
 
+## 今後やりたいこと
+
+- partial_fakeを分別する3値分類
+- サンプル数に応じたPhase1, Phase2それぞれでのモデルの判定精度比較
 
